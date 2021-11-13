@@ -38,4 +38,9 @@
             addi $s5, $s5, 1						# Load sum of $s5 and 1 into $s5
 			j loop_space_1							# Return to top of loop_space_1
 
+		pass_2:
+
+			end_spaces:                             # Get number of spaces at end
+
+
 	
