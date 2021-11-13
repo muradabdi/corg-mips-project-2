@@ -32,5 +32,10 @@
             li $s5, 0								# Load 0 into $s5
 
 		loop_space_1:
+			lb $t1, 0($a0)							# Load byte at userInput address into $t1
+			bne $t1, 0x20, pass_2					# Branch to pass_2 if $t1 does not equal space character
+			addi $a0, $a0, 1						# Load sum of $a0 and 1 into $a0
+            addi $s5, $s5, 1						# Load sum of $s5 and 1 into $s5
+			j loop_space_1							# Return to top of loop_space_1
 
 	
