@@ -10,3 +10,12 @@
 		la $a0, userInput							# Load userInput address into $a0
 		li $a1, 1000								# Load 1000 into $a1
 		syscall
+
+		addi $s4, $s4, 0                            # Load 0 into $s4. $s4 = counter
+
+	loop:
+
+	wrong:
+
+	pass:
+	
