@@ -24,7 +24,12 @@
 		li $v0, 4                                   # 4 = code to print string
 		la $a0, error                               # If errors, print a message not recognized
 		syscall
-		b exit_program                              # Unconditionally branch to exit_program
 
 	pass:
+
+		start_spaces:								# Get number of spaces at start
+            la $a0, userInput						# Load userInput address into $a0
+            li $s5, 0								# Load 0 into $s5
+			
+
 	
