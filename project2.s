@@ -14,8 +14,13 @@
 		addi $s4, $s4, 0                            # Load 0 into $s4. $s4 = counter
 
 	loop:
+		lb $t1, 0($a0)                              # Load byte at userInput address into $t1
+		beqz $t1, pass_1                            # Conditionally branch to pass_1 if $t1 is 0. End of string
+		addi $a0, $a0, 1                            # Add 1 to $a0
+		addi $s4, $s4, 1                            # Increment count, add 1 to $s4
+		j loop                                      # Return to top of loop
 
 	wrong:
 
-	pass:
+	pass_1:
 	
