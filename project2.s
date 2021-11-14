@@ -57,3 +57,8 @@
 				la $a0, userInput                   # Load userInput address into $a0
 				add $s1, $a0, $s5                   # Start address without spaces
 				add $s2, $a0, $s4                   # Load sum of $a0 and $s4 into $s2
+				addi $s2, $s2, -2                   # Load sum of $s2 and -2 into $s2
+				sub $s2, $s2, $s6                   # End address without spaces
+
+				sub $t0, $s2, $s1                   # Load difference of $s2 and $s1 into $t0
+				bgt $t0, 3, wrong                   # Wrong if more than 4 characters (5 including newline)
