@@ -51,3 +51,4 @@
 				bne $t1, 0x20, pass_3               # Branch to pass_3 if $t1 does not equal space character
 				addi $a0, $a0, -1                   # Load sum of $a0 and -1 into $a0
 				addi $s6, $s6, 1                    # Load sum of $s6 and 1 into $s6
+				j loop_space_2
