@@ -41,6 +41,7 @@
 		pass_2:
 
 			end_spaces:                             # Get number of spaces at end
-
-
-	
+                la $a0, userInput                   # Load userInput address into $a0
+                add $a0, $s4, $a0                   # Load sum of $a0 and $s4 into $a0
+                addi $a0, $a0, -2                   # Load sum of $a0 and -2 into $a0
+                li $s6, 0                           # Load 0 into $s6
