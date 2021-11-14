@@ -52,3 +52,8 @@
 				addi $a0, $a0, -1                   # Load sum of $a0 and -1 into $a0
 				addi $s6, $s6, 1                    # Load sum of $s6 and 1 into $s6
 				j loop_space_2
+
+			pass_3:
+				la $a0, userInput                   # Load userInput address into $a0
+				add $s1, $a0, $s5                   # Start address without spaces
+				add $s2, $a0, $s4                   # Load sum of $a0 and $s4 into $s2
