@@ -78,3 +78,7 @@
 				bge $t1, 0x41, calculate_power  	# Branch to calculate_power if $t1 is greater than or equal to uppercase A
 				bgt $t1, 0x39, wrong            	# Branch to wrong if $t1 is greater than 9
 				bge $t1, 0x30, calculate_power	    # Branch to calculate_power if $t1 greater than 0	
+
+			calculate_power:
+				bne $t2, 0, load_power              # Branch to load_power if $t2 does not equal 0
+				b done                              # Unconditionally branch to done
