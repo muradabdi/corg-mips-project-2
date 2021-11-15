@@ -82,3 +82,7 @@
 			calculate_power:
 				bne $t2, 0, load_power              # Branch to load_power if $t2 does not equal 0
 				b done                              # Unconditionally branch to done
+				load_power:
+					mul $t3, $t3, $t4                   # Load product of $t3 and $t4 into $t3
+					addi $t5, $t5, -1                   # Load sum of $t5 and -1 into $t5
+					bne $t5, $zero, load_power          # Branch back to load_power if $t5 does not equal $zero
