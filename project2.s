@@ -72,3 +72,7 @@
 				li $t3, 1	                        # Load 1 into $t3. $t3 = power (36^n)
 				lb $t1, 0($s2)                      # Load byte at userInput address int
 				bltu $t1, 0x30, wrong	            # Branch to wrong is $t1 is less than 0
+				bgt $t1, 0x7A, wrong	            # Branch to wrong if $t1 is greater than lowercase z
+				bge $t1, 0x61, calculate_power  	# Branch to calculate_power if $t1 is greater than or equal to lowercase a
+				bgt $t1, 0x5A, wrong	            # Branch to wrong if $t1 is greater than uppercase Z
+				bge $t1, 0x41, calculate_power  	# Branch to calculate_power if $t1 is greater than or equal to uppercase A
