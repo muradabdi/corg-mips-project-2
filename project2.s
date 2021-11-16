@@ -62,3 +62,8 @@
 
 				sub $t0, $s2, $s1                   # Load difference of $s2 and $s1 into $t0
 				bgt $t0, 3, wrong                   # Wrong if more than 4 characters (5 including newline)
+			
+				li $s0, 0	                        # Load 0 into $s0. $s0 = sum value
+				li $t2, 0	                        # Load 0 into $t2. $t2 = counter
+				li $t4, 36	                        # Load 36 into $t4. $t4 = N base
+				li $t7, 0	                        # Load 0 into $t7. $t7 = temp
