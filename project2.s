@@ -67,3 +67,7 @@
 				li $t2, 0	                        # Load 0 into $t2. $t2 = counter
 				li $t4, 36	                        # Load 36 into $t4. $t4 = N base
 				li $t7, 0	                        # Load 0 into $t7. $t7 = temp
+			
+			loop_string:
+				li $t3, 1	                        # Load 1 into $t3. $t3 = power (36^n)
+				lb $t1, 0($s2)                      # Load byte at userInput address int
