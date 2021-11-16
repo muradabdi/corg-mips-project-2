@@ -71,3 +71,4 @@
 			loop_string:
 				li $t3, 1	                        # Load 1 into $t3. $t3 = power (36^n)
 				lb $t1, 0($s2)                      # Load byte at userInput address int
+				bltu $t1, 0x30, wrong	            # Branch to wrong is $t1 is less than 0
