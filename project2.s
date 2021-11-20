@@ -86,3 +86,9 @@
 					mul $t3, $t3, $t4                   # Load product of $t3 and $t4 into $t3
 					addi $t5, $t5, -1                   # Load sum of $t5 and -1 into $t5
 					bne $t5, $zero, load_power          # Branch back to load_power if $t5 does not equal $zero
+
+			done:
+			z_N:
+			Z_N:
+			a_z:
+			A_Z:
