@@ -88,6 +88,12 @@
 					bne $t5, $zero, load_power          # Branch back to load_power if $t5 does not equal $zero
 
 			done:
+				beq $t1, 0x7A, z_N                  # Branch to z_N if $t1 equals lowercase z. z = 34
+				beq $t1, 0x5A, Z_N                  # Branch to Z_N if $t1 equals uppercase Z. Z = 34
+				bge $t1, 0x61, a_z                  # Branch to a_z f $t1 is greater than or equal to lowercase a
+				bge $t1, 0x41, A_Z                  # Branch to A_Z f $t1 is greater than or equal to uppercase A
+				addi $t6, $t1, -48                  # Load sum of $t1 and -48 into $t7
+
 			z_N:
 			Z_N:
 			a_z:
