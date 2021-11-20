@@ -93,12 +93,16 @@
 				bge $t1, 0x61, a_z                  # Branch to a_z f $t1 is greater than or equal to lowercase a
 				bge $t1, 0x41, A_Z                  # Branch to A_Z f $t1 is greater than or equal to uppercase A
 				addi $t6, $t1, -48                  # Load sum of $t1 and -48 into $t7
-
+				b cal                               # Unconditionally branch to cal
 			z_N:
 				li $t6, 35                          # Load 35 into $t6
+				b cal
 			Z_N:
 				li $t6, 35                          # Load 35 into $t6
+				b cal
 			a_z:
 				addi $t6, $t1, -87                  # Load sum of $t1 and -87 into $t6
+				b cal
 			A_Z:
 				addi $t6, $t1, -55                  # Load sum of $t1 and -55 into $t6
+				b cal
