@@ -95,6 +95,10 @@
 				addi $t6, $t1, -48                  # Load sum of $t1 and -48 into $t7
 
 			z_N:
+				li $t6, 35                          # Load 35 into $t6
 			Z_N:
+				li $t6, 35                          # Load 35 into $t6
 			a_z:
+				addi $t6, $t1, -87                  # Load sum of $t1 and -87 into $t6
 			A_Z:
+				addi $t6, $t1, -55                  # Load sum of $t1 and -55 into $t6
