@@ -106,3 +106,10 @@
 			A_Z:
 				addi $t6, $t1, -55                  # Load sum of $t1 and -55 into $t6
 				b cal
+			
+			cal:	
+				mul $t7, $t3, $t6                   # Load product of $t3 and $t6 into $t7
+				add $s0, $t7, $s0                   # Load sum of $t7 and $s0 into $s0
+				addi $t2, $t2, 1                    # Load sum of $t2 and 1 into $t2
+				addi $s2, $s2, -1                   # Load sum of $s2 and -1 into $s2
+				addi $t5, $t2, 0                    # Load sum of $t2 and 0 into $t5
