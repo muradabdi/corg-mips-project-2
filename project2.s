@@ -113,3 +113,4 @@
 				addi $t2, $t2, 1                    # Load sum of $t2 and 1 into $t2
 				addi $s2, $s2, -1                   # Load sum of $s2 and -1 into $s2
 				addi $t5, $t2, 0                    # Load sum of $t2 and 0 into $t5
+				ble $s1, $s2, loop_string           # Branch to loop_string if $s1 is less than or equal to $s2
