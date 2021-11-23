@@ -118,3 +118,7 @@
 				li $v0, 1					        # 1 = code to print integer
 				move $a0, $s0 				        # Move contents of $s0 to $a0
 				syscall
+
+	exit_program:
+		li $v0, 10						            # 10 = code to exit
+		syscall
