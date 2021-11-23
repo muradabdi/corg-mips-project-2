@@ -24,6 +24,7 @@
 		li $v0, 4                                   # 4 = code to print string
 		la $a0, error                               # If errors, print a message not recognized
 		syscall
+		b exit_program                              # Unconditionally branch to exit_program
 
 	pass_1:
 
